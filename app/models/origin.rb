@@ -17,7 +17,6 @@ class Origin
     end 
 
     def animals 
-       
         binding.pry
     end 
 

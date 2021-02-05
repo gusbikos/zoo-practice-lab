@@ -26,13 +26,11 @@ class Zoo
     def all_animal_species 
     
     end 
-
+    
     def self.find_by_name 
     
     end 
 
-
-    
 end 
 
 0
