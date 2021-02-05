@@ -8,6 +8,7 @@ class Animal
         @name = name 
         @species = species 
         @@all << self 
+        binding.pry
     end 
 
     def self.all 
@@ -15,7 +16,8 @@ class Animal
     end 
 
     def zoo 
-    
+        Zoo.all.select {|zoos| zoos.name == self} 
+        #binding.pry
     end 
 
     def origin 

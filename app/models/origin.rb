@@ -1,6 +1,3 @@
-require 'pry'
-require_relative 'animal'
-require_relative 'zoo'
 
 class Origin
 
@@ -11,7 +8,8 @@ class Origin
     def initialize(continent, country)
         @continent = continent
         @country = country 
-        @@all << self 
+        @@all << self
+        #binding.pry 
     end
 
     def self.all 
@@ -19,14 +17,15 @@ class Origin
     end 
 
     def animals 
-
+       
+        binding.pry
     end 
 
-    def zoos 
-
+    def zoo
+        
     end 
 
-    def animal_numer 
+    def animal_number 
     
     end 
 

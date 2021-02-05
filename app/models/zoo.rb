@@ -9,9 +9,10 @@ class Zoo
 
 
     def initialize(name, address)
-        @zoo_name = zoo_name 
+        @zoo_name = name 
         @address = address 
         @@all << self 
+        #binding.pry
     end 
 
     def self.all 
@@ -19,7 +20,7 @@ class Zoo
     end 
 
     def all_animals 
-    
+        
     end 
 
     def all_animal_species 
@@ -33,6 +34,5 @@ class Zoo
 
     
 end 
-zoo = Zoo.new("horse","ny")
-binding.pry 
+
 0
