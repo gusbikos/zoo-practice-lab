@@ -9,14 +9,15 @@ class Origin
         @continent = continent
         @country = country 
         @@all << self
-        #binding.pry 
+        binding.pry 
     end
 
     def self.all 
         @@all 
     end 
 
-    def animals 
+    def animals
+        Animal.all.select{ |a| a.name == self } 
         binding.pry
     end 
 

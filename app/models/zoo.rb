@@ -3,8 +3,8 @@ class Zoo
     @@all = [] 
 
 
-    attr_accessor :zoo_name 
-    attr_reader :address 
+    attr_accessor :zoo_name
+    attr_reader :address
 
 
 
@@ -12,7 +12,7 @@ class Zoo
         @zoo_name = name 
         @address = address 
         @@all << self 
-        #binding.pry
+        # binding.pry
     end 
 
     def self.all 
@@ -31,6 +31,6 @@ class Zoo
     
     end 
 
-end 
+    binding.pry 
 
-0
+end 

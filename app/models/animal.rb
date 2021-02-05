@@ -2,22 +2,20 @@ class Animal
 
     @@all = []
 
-    attr_reader :species, :name 
+    attr_reader :species, :name
     
     def initialize(name, species)
         @name = name 
         @species = species 
         @@all << self 
-        #binding.pry
+        # binding.pry
     end 
 
     def self.all 
         @@all 
     end 
 
-    def zoo 
-        Zoo.all.select { |zoos| zoos.name == self} 
-
+    def zoo
         binding.pry
     end 
 
@@ -26,6 +24,3 @@ class Animal
     end 
 
 end
-
-binding.pry 
-0 
