@@ -1,26 +1,20 @@
+
 class Animal
 
+    # getter
+    attr_reader :species, :name
+
+    #  class variable
     @@all = []
 
-    attr_reader :species, :name
-    
     def initialize(name, species)
-        @name = name 
-        @species = species 
-        @@all << self 
-        # binding.pry
-    end 
+        @name, @species = name, species
+        # [] => Animal
+        @@all << self
+    end
 
-    def self.all 
-        @@all 
-    end 
-
-    def zoo
-        binding.pry
-    end 
-
-    def origin 
-    
-    end 
-
+       #=> Animal.all
+    def self.all
+        @@all
+    end
 end

@@ -1,19 +1,24 @@
+# gemfile
 require 'pry'
+require 'require_all'
 
-require_relative './zoo'
-require_relative './animal'
-require_relative './origin'
+# import relative path
+require_all './models/*'
 
-
-# class Origin
-origin = Origin.new("North America", "USA")
-
-# class Animal
+# Animal 
 tiger = Animal.new("tigger", "tiger")
-Animal1 = Animal.new("wilbert", "tiger")
-# class zoo
-zoo = Zoo.new(tiger, origin)
-zoo1 = Zoo.new(Animal1, origin)
+bear = Animal.new("tigger", "bear")
+
+# Origin
+usa = Origin.new('North America', "usa")
+mexico = Origin.new("North America", "mexico")
+europe = Origin.new("europe", "france")
+# Zoo
+bronx_zoo = Zoo.new(tiger, usa, "Queens", "hood")
+bronx3= Zoo.new(bear, mexico, "Bronx", "hood")
+bronx2 = Zoo.new(tiger, europe, "Bronx", "hood")
+bronx1 = Zoo.new(tiger, mexico, "Bronx", "hood")
+
 
 binding.pry
 0

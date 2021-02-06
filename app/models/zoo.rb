@@ -1,36 +1,36 @@
 class Zoo
 
-    @@all = [] 
+    # getter
+    attr_reader :address, :zoo_instance, :animal_instance
 
+    # getter and setter
+    attr_accessor :name
+    # class variable
+    @@all = []
 
-    attr_accessor :zoo_name
-    attr_reader :address
+    def initialize(zoo_instance, animal_instance, name, address)
+        @zoo_instance, @animal_instance = zoo_instance, animal_instance
+        @name, @address = name, address
+        # [] => Origin
+        @@all << self
+    end
 
-
-
-    def initialize(name, address)
-        @zoo_name = name 
-        @address = address 
-        @@all << self 
-        # binding.pry
-    end 
-
-    def self.all 
-        @@all 
-    end 
-
-    def all_animals 
-        
-    end 
-
-    def all_animal_species 
     
-    end 
-    
-    def self.find_by_name 
-    
-    end 
+       #=> Origin.all
+    def self.all
+       @@all
+    end
 
-    binding.pry 
+    def all_animals
+        Animal.all
+    end
 
-end 
+    # Zoo#all_animals should return all the animals that a specific instance of a zoo has.
+    def all_animals_species
+        self.all_animals.map(&:species)
+    end
+
+    def self.find_by_name(name)
+        self.all.select { |z| z.name == name}
+    end
+end
