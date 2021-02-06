@@ -57,6 +57,7 @@ class Origin
   @zoo_instance=#<Animal:0x00007f8dbb077c40 @name="tigger", @species="tiger">>]
 =end
 
+    # at the current state it will break 
     def self.most_animals
        zoo_ = Zoo.all.filter_map { | v|
 
