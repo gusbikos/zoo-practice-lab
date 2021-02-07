@@ -48,9 +48,28 @@ class Origin
     
     def self.most_animals
         binding.pry
+
         Animal.all.each_with_object(Hash.new(0)) { |k,v| 
             v[k.origin_instance.continent] += 1 
-        }.sort_by {|o, n| n}.last[1]
+        }.sort_by { |o, n| n}.last[0]
+
+        # Animal.all => animal instance
+
+
+        # .each => loops over the array
+        # animal = Hash.new(0) => {}
+        # .each_with_object(Hash.new(0))
+
+        # v => nil
+        #  k => animal class instance 
+        #  k.origin_instance.continent
+        #  v[k.origin_instance.continent] += 1 => Hash.new(0)
+
+        # {:k.origin_instance.continent => 1,:k.origin_instance.continent => 2}
+
+        #.sort_by { |o, n| n}.LAST => result {:k.origin_instance.continent => 2}
+        
+        # .last[0] "North America"
         # ! general has the most animals
         # ? return an instance of an origin
     end
