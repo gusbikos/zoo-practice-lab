@@ -1,15 +1,14 @@
 class Zoo
 
     # getter
-    attr_reader :address, :zoo_instance, :animal_instance
+    attr_reader :address
 
     # getter and setter
     attr_accessor :name
     # class variable
     @@all = []
 
-    def initialize(zoo_instance, animal_instance, name, address)
-        @zoo_instance, @animal_instance = zoo_instance, animal_instance
+    def initialize( name, address)
         @name, @address = name, address
         # [] => Origin
         @@all << self
@@ -32,5 +31,9 @@ class Zoo
 
     def self.find_by_name(name)
         self.all.select { |z| z.name == name}
+    end
+
+    def origins
+        
     end
 end
