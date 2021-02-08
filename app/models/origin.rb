@@ -4,7 +4,6 @@ class Origin
     # getter
     attr_reader :continent, :country
 
-    @@intersection
     # class variable
     @@all = []
 
@@ -20,7 +19,6 @@ class Origin
        @@all
     end
 
-    # !-- - `Origin#animals` should return all the animals that a specific instance of an origin has. -->
     def animals
         Animal.all.select { |o| o.origin_instance == self}
     end
@@ -38,8 +36,6 @@ class Origin
     # Origin#animal_number should return an integer that indicates the number of different animal instances an origin has in total.
     def animal_number 
         self.animals.uniq.count
-        # ! output => integer 
-        # ? number of different animal instance an Origin(mexico || usa) has in total
     end
 
     def self.find_by_continent(c)
@@ -49,10 +45,11 @@ class Origin
     def self.most_animals
         binding.pry
 
-        Animal.all.each_with_object(Hash.new(0)) { |k,v| 
-            v[k.origin_instance.continent] += 1 
-        }.sort_by { |o, n| n}.last[0]
-
+        Animal.all.each_with_object(Hash.new(0)) { |key,value| 
+            value[key.origin_instance] += 1 
+        }.sort_by { |origin, index|
+            index
+        }.last[0]
         # Animal.all => animal instance
 
 
@@ -78,3 +75,17 @@ end
 
 binding.pry
 0
+
+
+
+
+
+
+# def animals_number
+#     animals.size
+#    end
+#    def self.most_animals
+
+#     all.max_by{ |origin| origin.animals_number}
+#      # this iall.sort{|origin| origin.number_of_animals}.last
+#    end
