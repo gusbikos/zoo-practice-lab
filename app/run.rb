@@ -19,8 +19,8 @@ bronx1 = Zoo.new("Bronx", "hood")
 # Animal 
 tiger = Animal.new("tigger", "tiger", bronx_zoo, usa)
 bear = Animal.new("rick", "bear", bronx3, mexico)
-bear = Animal.new("fuck", "dog", bronx3, mexico)
-bear = Animal.new("fuck", "dog", bronx3, europe)
+bear = Animal.new("gus", "dog", bronx3, mexico)
+bear = Animal.new("doug", "dog", bronx3, europe)
 dog = Animal.new("wilbert", "bear", bronx1, europe)
 
 Origin.find_by_continent("North America")

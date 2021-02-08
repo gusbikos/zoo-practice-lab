@@ -81,11 +81,19 @@ binding.pry
 
 
 
-# def animals_number
-#     animals.size
-#    end
-#    def self.most_animals
+def animals_number
+    animals.size
+   end
+   def self.most_animals
 
-#     all.max_by{ |origin| origin.animals_number}
-#      # this iall.sort{|origin| origin.number_of_animals}.last
-#    end
+    usa.animals 
+    #=> origin_istance
+
+    animals.size 
+    #=> 1
+    all.max_by 
+    #=> all 
+
+    all.max_by{ |origin| origin.animals_number}
+     # this iall.sort{|origin| origin.number_of_animals}.last
+   end
